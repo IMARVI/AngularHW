@@ -1,7 +1,7 @@
-<h1>Tarea sortt</h1>
-<h3>
-  Isaias Martinez V
-</h3>
+<h1>Tarea Sort</h1>
+
+<router-outlet></router-outlet>
+
 <div class="col-md-12">
   <table class="table table-responsive table-hover">
     <tr>
@@ -18,8 +18,10 @@
         <i class="fa" [ngClass]="{'fa-sort': column != 'carrera', 'fa-sort-asc': (column == 'carrera' && isDesc), 'fa-sort-desc': (column == 'carrera' && !isDesc) }" aria-hidden="true"> </i>
       </th>
     </tr>
-    <tr *ngFor="let alumno of alumnos | orderTable: {property: column, direction: direction}">
-      <td>{{alumno.nombre}}</td>
+    <tr *ngFor="let alumno of detalleService.infoAlumnos  | orderTable: {property: column, direction: direction}">
+      <a href="/detalle">
+        <td>{{alumno.nombre}}</td>
+      </a>
       <td>{{alumno.matricula}}</td>
       <td>{{alumno.carrera}}</td>
     </tr>
