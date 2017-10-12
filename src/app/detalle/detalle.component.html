@@ -1,8 +1,16 @@
-<table ng-table="vm.tableParams" class="table" show-filter="true">
-    <tr ng-repeat="user in $data">
-        <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
-            </td>
-        <td title="'Age'" filter="{ age: 'number'}" sortable="'age'">
-            </td>
+<div class="col-md-12">
+  <table class="table table-responsive table-hover">
+    <tr>
+      <th>
+        Nombre
+      </th>
+      <th>
+        Matricula
+      </th>
     </tr>
-</table>
+    <tr>
+      <td>{{alumno.nombre}}</td>
+      <td>{{alumno.matricula}}</td>
+    </tr>
+  </table>
+</div>

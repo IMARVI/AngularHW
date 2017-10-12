@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { OrderTablePipe } from './order-table.pipe';
 import { DetalleService } from '../providers/detalle-service/detalle-service';
+import { Router, RouterModule } from '@angular/router';
 
 
 @Component({
@@ -18,6 +19,7 @@ export class AppComponent {
   constructor(
     public detalleService: DetalleService
   ) {}
+
   sort(param) {
     this.isDesc = !this.isDesc;
     this.column = param;

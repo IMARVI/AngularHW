@@ -19,7 +19,7 @@
       </th>
     </tr>
     <tr *ngFor="let alumno of detalleService.infoAlumnos  | orderTable: {property: column, direction: direction}">
-      <a href="/detalle">
+      <a [routerLink]="['/detalle/:alumno',alumno]">
         <td>{{alumno.nombre}}</td>
       </a>
       <td>{{alumno.matricula}}</td>

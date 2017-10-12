@@ -6,7 +6,10 @@ import { OrderTablePipe } from './order-table.pipe';
 import { DetalleComponent } from './detalle/detalle.component';
 
 const appRoutes: Routes = [
-  {path: 'detalle', component: DetalleComponent}
+  {path: '', component: AppComponent},
+  { path: 'detalle/:alumno',
+  component: DetalleComponent
+  }
 ];
 
 @NgModule({
