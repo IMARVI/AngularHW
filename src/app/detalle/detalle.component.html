@@ -1,29 +1,35 @@
 <div *ngIf= "alumno">
   <h2>Detalles de {{alumno.nombre}} </h2>
-  <div>
-      <label>Nombre {{alumno.nombre}} </label>
-      <input [(ngModel)]= "this.alumno.nombre" placeholder="">
+  <div class="form-group">
+      <label>Nombre:</label>
+      <input [(ngModel)]= "this.alumno.nombre" placeholder="" type="text" class="form-control">
+      <small class="form-text text-muted">{{alumno.nombre}}</small>
     </div>
-  <div>
-    <label>Matricula {{alumno.matricula}} </label>
-    <input [(ngModel)]= "this.alumno.matricula" placeholder="">
+  <div class="form-group">
+    <label>Matricula:</label>
+    <input [(ngModel)]= "this.alumno.matricula" placeholder="" type="text" class="form-control">
+    <small class="form-text text-muted">{{alumno.matricula}}</small>
   </div>
-  <div>
-    <label>Carrera {{alumno.carrera}} </label>
-    <input [(ngModel)]= "this.alumno.carrera" placeholder="">
+  <div class="form-group">
+    <label>Carrera:</label>
+    <input [(ngModel)]= "this.alumno.carrera" placeholder="" type="text" class="form-control">
+    <small class="form-text text-muted">{{alumno.carrera}}</small>
   </div>
-  <div>
-    <label>Semestre {{alumno.semestre}} </label>
-    <input [(ngModel)]= "this.alumno.semestre" placeholder="">
+  <div class="form-group">
+    <label>Semestre:</label>
+    <input [(ngModel)]= "this.alumno.semestre" placeholder="" type="text" class="form-control">
+    <small class="form-text text-muted">{{alumno.semestre}}</small>
   </div>
-  <div>
-      <label>Edad {{alumno.edad}} </label>
-      <input [(ngModel)]= "this.alumno.edad" placeholder="">
+  <div class="form-group">
+      <label>Edad:</label>
+      <input [(ngModel)]= "this.alumno.edad" placeholder="" type="text" class="form-control">
+      <small class="form-text text-muted">{{alumno.edad}}</small>
   </div>
   <h3>Materias</h3>
-  <div *ngFor= "let materia of alumno.materias" >
-      <label>{{materia.nombre}}: {{materia.calificacion}} </label>
-      <input [(ngModel)]= "materia.calificacion" placeholder="">
-    </div>
-  <button (click) = save(this.alumno) >Salvar</button>
+  <div *ngFor= "let materia of alumno.materias" class="form-group">
+      <label>{{materia.nombre}}:</label>
+      <input [(ngModel)]= "materia.calificacion" placeholder="" type="text" class="form-control">
+      <small class="form-text text-muted">{{materia.calificacion}}</small>
+  </div>
+  <button (click) = save(this.alumno) class="btn btn-primary">Salvar</button>
 </div>
