@@ -1,0 +1,28 @@
+<h1>Tarea Sort</h1>
+<router-outlet></router-outlet>
+<div class="container">
+  <table class="table table-responsive table-hover">
+    <tr>
+      <th class="pointer" (click)="sort('nombre')">
+        Nombre
+        <i class="fa" [ngClass]="{'fa-sort': column != 'CategoryID', 'fa-sort-asc': (column == 'CategoryID' && isDesc), 'fa-sort-desc': (column == 'CategoryID' && !isDesc) }" aria-hidden="true"> </i>
+      </th>
+      <th class="pointer" (click)="sort('matricula')">
+        Matricula
+        <i class="fa" [ngClass]="{'fa-sort': column != 'matricula', 'fa-sort-asc': (column == 'matricula' && isDesc), 'fa-sort-desc': (column == 'matricula' && !isDesc) }" aria-hidden="true"> </i>
+      </th>
+      <th class="pointer" (click)="sort('carrera')">
+        Carrera
+        <i class="fa" [ngClass]="{'fa-sort': column != 'carrera', 'fa-sort-asc': (column == 'carrera' && isDesc), 'fa-sort-desc': (column == 'carrera' && !isDesc) }" aria-hidden="true"> </i>
+      </th>
+    </tr>
+    <tr *ngFor="let alumno of detalleService.infoAlumnos  | orderTable: {property: column, direction: direction}">
+      <button (click)= irDetalle(alumno.id) >
+        <td>{{alumno.nombre}}</td>
+      </button>
+      <td>{{alumno.matricula}}</td>
+      <td>{{alumno.carrera}}</td>
+    </tr>
+  </table>
+</div>
+

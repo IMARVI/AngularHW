@@ -1,6 +1,7 @@
 import {Materia} from './materia';
 export class Alumno {
   constructor(
+    public id: number,
     public nombre: string,
     public foto: string,
     public carrera: string,

@@ -1,16 +1,29 @@
-<div class="col-md-12">
-  <table class="table table-responsive table-hover">
-    <tr>
-      <th>
-        Nombre
-      </th>
-      <th>
-        Matricula
-      </th>
-    </tr>
-    <tr>
-      <td>{{alumno.nombre}}</td>
-      <td>{{alumno.matricula}}</td>
-    </tr>
-  </table>
+<div *ngIf= "alumno">
+  <h2>Detalles de {{alumno.nombre}} </h2>
+  <div>
+      <label>Nombre {{alumno.nombre}} </label>
+      <input [(ngModel)]= "this.alumno.nombre" placeholder="">
+    </div>
+  <div>
+    <label>Matricula {{alumno.matricula}} </label>
+    <input [(ngModel)]= "this.alumno.matricula" placeholder="">
+  </div>
+  <div>
+    <label>Carrera {{alumno.carrera}} </label>
+    <input [(ngModel)]= "this.alumno.carrera" placeholder="">
+  </div>
+  <div>
+    <label>Semestre {{alumno.semestre}} </label>
+    <input [(ngModel)]= "this.alumno.semestre" placeholder="">
+  </div>
+  <div>
+      <label>Edad {{alumno.edad}} </label>
+      <input [(ngModel)]= "this.alumno.edad" placeholder="">
+  </div>
+  <h3>Materias</h3>
+  <div *ngFor= "let materia of alumno.materias" >
+      <label>{{materia.nombre}}: {{materia.calificacion}} </label>
+      <input [(ngModel)]= "materia.calificacion" placeholder="">
+    </div>
+  <button (click) = save(this.alumno) >Salvar</button>
 </div>
