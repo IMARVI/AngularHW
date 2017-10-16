@@ -33,6 +33,8 @@ export class DetalleComponent implements OnInit {
 
   save() {
     this.detalleService.saveAlumno(this.alumno);
+    console.log('Nuevos datos');
+    console.log(this.alumno);
   }
 
 }
