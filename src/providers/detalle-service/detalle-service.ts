@@ -29,12 +29,12 @@ export class DetalleService {
      this.infoAlumnos = [
       new Alumno(
         1,
-        'Isaias',
+        'Isaías Martínez',
         'foto1',
         'ITC',
         'A00988525',
         '5',
-        '22',
+        '26',
         [
           new Materia('Español', '100'),
           new Materia('Ingles', '90')
@@ -42,10 +42,23 @@ export class DetalleService {
       ),
       new Alumno(
         2,
-        'Martin',
+        'Martín Fernández Lorenzo',
         'foto1',
         'ITC',
-        'A00988526',
+        'A01270963',
+        '5',
+        '21',
+        [
+          new Materia('Español', '100'),
+          new Materia('Ingles', '90')
+        ]
+      ),
+      new Alumno(
+        3,
+        'Luis Alberto Torres Romero',
+        'foto1',
+        'ITC',
+        'A00988527',
         '5',
         '22',
         [
@@ -54,11 +67,76 @@ export class DetalleService {
         ]
       ),
       new Alumno(
-        3,
-        'Luis',
+        4,
+        'Freddie Mercury',
+        'foto1',
+        'IMA',
+        'A00988527',
+        '5',
+        '22',
+        [
+          new Materia('Español', '100'),
+          new Materia('Ingles', '90')
+        ]
+      ),
+      new Alumno(
+        5,
+        'Paul McCartney',
+        'foto1',
+        'IMI',
+        'A01234567',
+        '5',
+        '22',
+        [
+          new Materia('Español', '100'),
+          new Materia('Ingles', '90')
+        ]
+      ),
+      new Alumno(
+        6,
+        'John Lennon',
+        'foto1',
+        'IIS',
+        'A00988527',
+        '5',
+        '22',
+        [
+          new Materia('Español', '100'),
+          new Materia('Ingles', '90')
+        ]
+      ),
+      new Alumno(
+        7,
+        'George Harrison',
         'foto1',
         'ITC',
-        'A00988527',
+        'A01234578',
+        '5',
+        '22',
+        [
+          new Materia('Español', '100'),
+          new Materia('Ingles', '90')
+        ]
+      ),
+      new Alumno(
+        8,
+        'Ringo Starr',
+        'foto1',
+        'IME',
+        'A01334578',
+        '5',
+        '22',
+        [
+          new Materia('Español', '100'),
+          new Materia('Ingles', '90')
+        ]
+      ),
+      new Alumno(
+        9,
+        'Bob Dylan',
+        'foto1',
+        'LIN',
+        'A09881234',
         '5',
         '22',
         [
